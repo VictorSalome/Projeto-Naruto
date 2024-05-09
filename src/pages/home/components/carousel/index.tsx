@@ -10,7 +10,6 @@ SwiperCore.use([Navigation]);
 
 export const Carousel = () => {
   const narutoImages = [
-    "https://wallpaperaccess.com/full/119705.jpg",
     "https://wallpaperaccess.com/full/204044.jpg",
     "https://wallpaperaccess.com/full/204042.jpg",
     "https://wallpaperaccess.com/full/204045.jpg",
