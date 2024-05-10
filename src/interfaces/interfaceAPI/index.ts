@@ -1,27 +1,27 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export interface IGetCharacterResponse {
-  characters: Character[];
+  characters: ICharacter[];
   currentPage: number;
   pageSize: number;
   totalCharacters: number;
 }
 
-export interface Character {
+export interface ICharacter {
   id: number;
   name: string;
   images: string[];
-  debut?: Debut;
+  debut?: IDebut;
   jutsu?: string[];
-  personal: Personal;
+  personal: IPersonal;
   uniqueTraits?: string[];
-  family?: Family;
+  family?: IFamily;
   natureType?: string[];
-  rank?: Rank;
-  voiceActors?: VoiceActors;
+  rank?: IRank;
+  voiceActors?: IVoiceActors;
   tools?: string[];
 }
 
-export interface Debut {
+export interface IDebut {
   manga?: string;
   anime?: string;
   game?: string;
@@ -31,7 +31,7 @@ export interface Debut {
   ova?: string;
 }
 
-export interface Personal {
+export interface IPersonal {
   species?: string;
   status?: string;
   kekkeiGenkai?: string;
@@ -41,29 +41,29 @@ export interface Personal {
   affiliation: any;
   birthdate?: string;
   sex?: string;
-  height?: Height;
-  weight?: Weight;
+  height?: IHeight;
+  weight?: IWeight;
   bloodType?: string;
   occupation: any;
   team: any;
   partner?: string;
-  age?: Age;
+  age?: IAge;
   clan?: string;
 }
 
-export interface Height {
+export interface IHeight {
   "Part II"?: string;
   "Part I"?: string;
   "Blank Period"?: string;
   Gaiden?: string;
 }
 
-export interface Weight {
+export interface IWeight {
   "Part II"?: string;
   "Part I"?: string;
 }
 
-export interface Age {
+export interface IAge {
   "Part I"?: string;
   "Part II"?: string;
   "Boruto Manga"?: string;
@@ -71,7 +71,7 @@ export interface Age {
   "Chunin Promotion"?: string;
 }
 
-export interface Family {
+export interface IFamily {
   husband?: string;
   brother?: string;
   father?: string;
@@ -85,18 +85,18 @@ export interface Family {
   "depowered form"?: string;
 }
 
-export interface Rank {
-  ninjaRank: NinjaRank;
+export interface IRank {
+  ninjaRank: INinjaRank;
   ninjaRegistration?: string;
 }
 
-export interface NinjaRank {
+export interface INinjaRank {
   "Part II"?: string;
   "Part I"?: string;
   "Boruto Manga"?: string;
 }
 
-export interface VoiceActors {
+export interface IVoiceActors {
   japanese: any;
   english: any;
 }

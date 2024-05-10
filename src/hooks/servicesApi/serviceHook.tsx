@@ -3,12 +3,33 @@ import { IGetCharacterResponse } from "../../interfaces/interfaceAPI";
 import { HTTPService } from "../../services";
 
 export const useGetCharacters = () => {
+  //limete por paginacao
+  const limit = 20;
+
   const { data, isLoading } = useQuery({
+    // nome da chave
     queryKey: ["character"],
+    // funcao que vai retornar os dados
     queryFn: () => {
+      // funcao que vai retornar os dados
       const response = HTTPService.get<IGetCharacterResponse>(
-        "/character"
+        `/character?limit=${limit}`
       ).then((res) => res.data);
+
+      return response;
+    },
+  });
+
+  return { data, isLoading };
+};
+
+export const useGetKara = () => {
+  const { data, isLoading } = useQuery({
+    queryKey: ["kara"],
+    queryFn: () => {
+      const response = HTTPService.get<IGetCharacterResponse>("/kara").then(
+        (res) => res.data
+      );
 
       return response;
     },

@@ -5,10 +5,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
 import "swiper/swiper-bundle.css";
 import { Navigation } from "swiper/modules";
+// import { useGetKara } from "../../../../hooks";
 
 SwiperCore.use([Navigation]);
 
 export const Carousel = () => {
+  // const karaOrganization = useGetKara();
+
   const narutoImages = [
     "https://wallpaperaccess.com/full/204044.jpg",
     "https://wallpaperaccess.com/full/204042.jpg",

@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        naruto: ["naruto", "sans-serif"],
+      },
       colors: {
         // Paleta Uzumaki Naruto
         "naruto-orange": "#f77f00",
