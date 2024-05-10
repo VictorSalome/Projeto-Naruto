@@ -1,12 +1,14 @@
+import { QueryClient, QueryClientProvider } from "react-query";
 import { NavBar } from "./components/navBar";
-import { Home } from "./pages/home";
+import { HomePage } from "./pages";
 
 function App() {
+  const queryClient = new QueryClient();
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <NavBar />
-      <Home />
-    </>
+      <HomePage />
+    </QueryClientProvider>
   );
 }
 
