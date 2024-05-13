@@ -1,15 +1,17 @@
 import { QueryClient, QueryClientProvider } from "react-query";
-import { NavBar } from "./components/navBar";
-import { HomePage } from "./pages";
+
 import "./assets/fonts/fonts.css";
+import { BrowserRouter } from "react-router-dom";
+import { AppRouter } from "./routes/router";
 
 function App() {
   const queryClient = new QueryClient();
   return (
-    <QueryClientProvider client={queryClient}>
-      <NavBar />
-      <HomePage />
-    </QueryClientProvider>
+    <BrowserRouter>
+      <QueryClientProvider client={queryClient}>
+        <AppRouter />
+      </QueryClientProvider>
+    </BrowserRouter>
   );
 }
 

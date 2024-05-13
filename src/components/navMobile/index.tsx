@@ -1,6 +1,7 @@
 import Hamburger from "hamburger-react";
 import { useState } from "react";
 import { Drawer, List, ListItem, ListItemText } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export const NavMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +21,7 @@ export const NavMobile = () => {
           <div className="">
             <List>
               <ListItem>
-                <ListItemText primary="Home" />
+                <Link to="/">Home</Link>
               </ListItem>
               <ListItem>
                 <ListItemText primary="Anime" />

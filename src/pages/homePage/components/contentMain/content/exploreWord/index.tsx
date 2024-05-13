@@ -1,4 +1,5 @@
 import { Button, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export const ExploreWord = () => {
   return (
@@ -12,7 +13,7 @@ export const ExploreWord = () => {
       <div>
         <div className="flex items-center justify-center">
           <img
-            src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*-p9KdeOq6kbXpwuf.jpg"
+            src="https://miro.medium.com/v2/resize:fit:2000/0*R52lzA8m-PbN62Qz"
             alt="logo-ninja"
             className="flex flex-col justify-center items-center p-3"
           />
@@ -49,21 +50,23 @@ export const ExploreWord = () => {
       </div>
 
       <div className="mt-5 mb-10">
-        <Button
-          style={{ backgroundColor: "#f77f00" }}
-          variant="contained"
-          startIcon={
-            <img
-              src="https://www.iconninja.com/files/468/145/137/naruto-icon.svg"
-              alt="leaf-seven"
-              width="30"
-              height="30"
-            />
-          }
-          className="mt-5"
-        >
-          Explore o mundo
-        </Button>
+        <Link to="/explore-world">
+          <Button
+            style={{ backgroundColor: "#f77f00" }}
+            variant="contained"
+            startIcon={
+              <img
+                src="https://www.iconninja.com/files/468/145/137/naruto-icon.svg"
+                alt="leaf-seven"
+                width="30"
+                height="30"
+              />
+            }
+            className="mt-5"
+          >
+            Explore o mundo
+          </Button>
+        </Link>
       </div>
     </div>
   );
