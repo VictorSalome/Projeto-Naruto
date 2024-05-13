@@ -1,7 +1,8 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 
 import { CardHokage } from "../../../../../components/cardHokage";
+import { Link } from "react-router-dom";
 
 export const HokagesInfo = () => {
   return (
@@ -14,7 +15,10 @@ export const HokagesInfo = () => {
         />
       </div>
 
-      <div className="flex flex-col text-justify items-center justify-center">
+      <div className="flex flex-col text-justify items-center justify-center mt-2 mb-2">
+        <Typography>
+          <h1 className="text-2xl ">Konoha</h1>
+        </Typography>
         <Typography
           sx={{ mb: 1 }}
           color="text.secondary"
@@ -99,6 +103,25 @@ export const HokagesInfo = () => {
           inspirando gerações de ninjas a se esforçarem para alcançar o melhor
           de si mesmos em busca da paz e da harmonia entre as nações shinobi.
         </Typography>
+        <div className="mt-5 mb-10">
+          <Link to="/explore-clans">
+            <Button
+              style={{ backgroundColor: "#f77f00" }}
+              variant="contained"
+              startIcon={
+                <img
+                  src="https://www.iconninja.com/files/468/145/137/naruto-icon.svg"
+                  alt="leaf-seven"
+                  width="30"
+                  height="30"
+                />
+              }
+              className="mt-5"
+            >
+              Conheça sobre os clãs de Konoha
+            </Button>
+          </Link>
+        </div>
       </div>
     </>
   );
