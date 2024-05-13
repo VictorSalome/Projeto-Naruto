@@ -3,7 +3,7 @@ import { IGetCharacterResponse } from "../../interfaces/interfaceAPI";
 import { HTTPService } from "../../services";
 
 export const useGetCharacters = () => {
-  //limete por paginacao
+  //limite por paginacao
   const limit = 20;
 
   const { data, isLoading } = useQuery({

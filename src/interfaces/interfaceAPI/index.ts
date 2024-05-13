@@ -2,8 +2,10 @@
 export interface IGetCharacterResponse {
   characters: ICharacter[];
   currentPage: number;
+  images: string[];
   pageSize: number;
   totalCharacters: number;
+
 }
 
 export interface ICharacter {

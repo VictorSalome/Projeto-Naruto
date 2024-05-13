@@ -12,7 +12,7 @@ export const NarutoHistory = () => {
       <Typography
         sx={{ mb: 1.5 }}
         color="text.secondary"
-        className="flex  text-justify items-center w-11/12 justify-center "
+        className="flex  text-justify items-center w-11/12 justify-center"
       >
         Naruto é uma série de mangá e anime criada por Masashi Kishimoto.
         <br />

@@ -1,21 +1,17 @@
-import {
-  Box,
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  Typography,
-} from "@mui/material";
+import { Box, Card, CardContent, Typography } from "@mui/material";
 import { useGetCharacters } from "../../../../hooks";
 import { ICharacter } from "../../../../interfaces/interfaceAPI";
 
 export const CardInfo = () => {
-  const characters = useGetCharacters();
+  const { data } = useGetCharacters();
+
+  const characters = data;
+
   return (
     <>
       <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
-        {characters.data?.characters.map((character: ICharacter) => (
-          <Card key={character.id} sx={{ minWidth: 345 }}>
+        {characters?.characters.map((character: ICharacter) => (
+          <Card key={character.id} sx={{ minWidth: 120 }}>
             <CardContent>
               <Box
                 sx={{
@@ -31,16 +27,13 @@ export const CardInfo = () => {
                   height="100"
                 />
               </Box>
-              <Typography gutterBottom variant="h5" component="div">
+              <Typography gutterBottom component="div">
                 {character.name}
               </Typography>
-              {/* <Typography variant="body2" color="text.secondary">
-            {character.description}
-          </Typography> */}
+              <Typography variant="body2" color="text.secondary">
+                {character.personal.clan}
+              </Typography>
             </CardContent>
-            <CardActions>
-              <Button size="small">Learn More</Button>
-            </CardActions>
           </Card>
         ))}
       </Box>
