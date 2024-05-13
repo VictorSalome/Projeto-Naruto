@@ -1,7 +1,11 @@
+import { useMediaQuery } from "@mui/material";
 import { AppBar, Toolbar, Typography } from "@mui/material";
-import { MenuHamburguer } from "../menuHamburguer";
+
+import { NavWeb } from "../navWeb";
+import { NavMobile } from "../navMobile";
 
 export const NavBar = () => {
+  const isMobile = useMediaQuery("(max-width: 768px)");
   return (
     <>
       <AppBar position="static" style={{ backgroundColor: "#f77f00" }}>
@@ -19,7 +23,7 @@ export const NavBar = () => {
 
             <p className="font-naruto">Naruto</p>
           </Typography>
-          <MenuHamburguer />
+          {isMobile ? <NavMobile /> : <NavWeb />}
         </Toolbar>
       </AppBar>
     </>
