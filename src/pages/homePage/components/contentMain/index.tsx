@@ -1,4 +1,6 @@
-import { CardMedia, Typography } from "@mui/material";
+import { CardMedia } from "@mui/material";
+import { NarutoHistory } from "./content/narutoHistory";
+import { ExploreWord } from "./content/exploreWord";
 
 export const ContentMain = () => {
   return (
@@ -11,9 +13,11 @@ export const ContentMain = () => {
         />
       </div>
       <div>
-        <Typography variant="h5" component="div">
-          Naruto
-        </Typography>
+        <NarutoHistory />
+      </div>
+
+      <div>
+        <ExploreWord />
       </div>
     </div>
   );
