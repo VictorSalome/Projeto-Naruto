@@ -40,12 +40,13 @@ export const useGetKara = () => {
 };
 
 export const useGetClan = () => {
+  const limit = 58;
   const { data, isLoading } = useQuery({
     queryKey: ["clan"],
     queryFn: () => {
-      const response = HTTPService.get<IGetClanResponse>("/clan").then(
-        (res) => res.data
-      );
+      const response = HTTPService.get<IGetClanResponse>(
+        `/clan?limit=${limit}`
+      ).then((res) => res.data);
 
       return response;
     },

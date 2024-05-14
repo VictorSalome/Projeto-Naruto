@@ -1,7 +1,12 @@
 import { Route, Routes, useNavigate } from "react-router-dom";
-import { ExploreWorldPage, HomePage } from "../pages";
+import {
+  ExploreWorldPage,
+  HomePage,
+  ExploreClansPages,
+  SearchClanPage,
+} from "../pages";
 import { NavBar } from "../components";
-import { ExploreClansPages } from "../pages/exploreClansPage";
+
 import { useEffect } from "react";
 
 export const AppRouter: React.FC = () => {
@@ -17,6 +22,7 @@ export const AppRouter: React.FC = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/explore-world" element={<ExploreWorldPage />} />
         <Route path="/explore-clans" element={<ExploreClansPages />} />
+        <Route path="/seach-clans" element={<SearchClanPage />} />
       </Routes>
     </>
   );
