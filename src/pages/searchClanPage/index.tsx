@@ -129,7 +129,7 @@ export const SearchClanPage = () => {
       </div>
 
       {/* Paginação */}
-      <div className="flex justify-center mt-3">
+      <div className="flex justify-center  mt-3">
         <Pagination
           count={Math.ceil(clans.length / cardsPerPage)}
           page={page}
