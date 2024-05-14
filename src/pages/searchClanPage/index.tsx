@@ -10,7 +10,7 @@ export const SearchClanPage = () => {
   return (
     <div>
       {clans?.map((clan) => (
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center " key={clan.id}>
           <img
             src={clan.characters[0].images[0]}
             alt={clan.name}
