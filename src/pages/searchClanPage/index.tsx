@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Card,
   CardActionArea,
@@ -8,27 +8,18 @@ import {
   Skeleton,
   TextField,
   Typography,
-  Pagination,
 } from "@mui/material";
 import { useGetClan } from "../../hooks";
 import { CiSearch } from "react-icons/ci";
 
 export const SearchClanPage = () => {
-  const { data, isLoading } = useGetClan();
-  let clans = data?.clans || []; // Inicializa clans com um array vazio se for undefined
+  const { data, isLoading } = useGetClan(); // Incluímos isLoading do hook customizado
+
+  const clans = data?.clans;
 
   const [loadingSkeleton] = useState(false);
-  const [page, setPage] = useState(1);
 
-  const cardsPerPage = 6;
-  const indexOfLastCard = page * cardsPerPage;
-  const indexOfFirstCard = indexOfLastCard - cardsPerPage;
-  const currentCards = clans.slice(indexOfFirstCard, indexOfLastCard);
-
-  const handlePageChange = (value: number) => {
-    setPage(value);
-  };
-
+  // Lógica para exibir o esqueleto enquanto os dados estão sendo carregados
   if (isLoading || loadingSkeleton) {
     return (
       <div>
@@ -51,7 +42,8 @@ export const SearchClanPage = () => {
         </div>
 
         <div className="flex flex-wrap justify-center mt-3">
-          {[1, 2, 3, 4, 5, 6].map((index) => (
+          {/* Exemplo de uso de Skeleton para o Card enquanto os dados carregam */}
+          {[1, 2, 3, 4].map((index) => (
             <div key={index} className="p-2 w-1/2 md:w-1/4">
               <Card sx={{ maxWidth: 180 }}>
                 <CardActionArea>
@@ -77,6 +69,7 @@ export const SearchClanPage = () => {
     );
   }
 
+  // Renderização do conteúdo final quando os dados estiverem carregados
   return (
     <div>
       <div className="mt-5 flex justify-center">
@@ -98,7 +91,7 @@ export const SearchClanPage = () => {
       </div>
 
       <div className="flex flex-wrap justify-center mt-3">
-        {currentCards.map((clan) => (
+        {clans?.map((clan) => (
           <div key={clan.id} className="p-2 w-1/2 md:w-1/4">
             <Card sx={{ maxWidth: 180 }}>
               <CardActionArea>
@@ -126,15 +119,6 @@ export const SearchClanPage = () => {
             </Card>
           </div>
         ))}
-      </div>
-
-      {/* Paginação */}
-      <div className="flex justify-center  mt-3">
-        <Pagination
-          count={Math.ceil(clans.length / cardsPerPage)}
-          page={page}
-          onChange={handlePageChange}
-        />
       </div>
     </div>
   );
