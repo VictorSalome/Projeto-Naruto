@@ -95,6 +95,7 @@ export const HokagesInfo = () => {
           Desde o lendário Hashirama Senju, o Primeiro Hokage, até o icônico
           Naruto Uzumaki, o Sétimo Hokage, esses líderes moldaram a Vila da
           Folha em um centro de poder e excelência ninja.
+          
           <br />
           <br />
           Além de seu papel como líderes militares e políticos, os Hokages
