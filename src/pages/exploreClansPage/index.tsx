@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 export const ExploreClansPages = () => {
   const narutoImages = [
-    
     "https://narutodb.xyz/cards/clans.jpeg",
     "https://img.quizur.com/f/img6166c8fe7e98e5.77316732.png?lastEdited=1634126082",
   ];
