@@ -1,6 +1,6 @@
 import { Box, Card, CardContent, Typography } from "@mui/material";
 import { useGetCharacters } from "../../../../hooks";
-import { ICharacter } from "../../../../interfaces/interfaceAPI";
+import { ICharacter } from "../../../../interfaces/interfaceCharacters";
 
 export const CardInfo = () => {
   const { data } = useGetCharacters();

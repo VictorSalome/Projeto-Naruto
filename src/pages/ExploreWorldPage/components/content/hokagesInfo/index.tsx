@@ -118,7 +118,7 @@ export const HokagesInfo = () => {
               }
               className="mt-5"
             >
-              Conheça sobre os clãs de Konoha
+              Conheça sobre os clãs
             </Button>
           </Link>
         </div>

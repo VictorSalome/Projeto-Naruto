@@ -1,2 +1,2 @@
 export * from "./homePage";
-export * from "./ExploreWorldPage";
+export * from "./exploreWorldPage";

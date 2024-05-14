@@ -1,6 +1,7 @@
 import { useQuery } from "react-query";
-import { IGetCharacterResponse } from "../../interfaces/interfaceAPI";
+import { IGetCharacterResponse } from "../../interfaces/interfaceCharacters";
 import { HTTPService } from "../../services";
+import { IGetClanResponse } from "../../interfaces/interfaceClans";
 
 export const useGetCharacters = () => {
   //limite por paginacao
@@ -28,6 +29,21 @@ export const useGetKara = () => {
     queryKey: ["kara"],
     queryFn: () => {
       const response = HTTPService.get<IGetCharacterResponse>("/kara").then(
+        (res) => res.data
+      );
+
+      return response;
+    },
+  });
+
+  return { data, isLoading };
+};
+
+export const useGetClan = () => {
+  const { data, isLoading } = useQuery({
+    queryKey: ["clan"],
+    queryFn: () => {
+      const response = HTTPService.get<IGetClanResponse>("/clan").then(
         (res) => res.data
       );
 

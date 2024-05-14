@@ -1,9 +1,49 @@
 import { Typography } from "@mui/material";
+import { useGetClan } from "../../hooks";
+import { CarouselComponent } from "../../components";
 
 export const ExploreClansPages = () => {
+  // const { data } = useGetClan();
+
+  // const clans = data?.clans;
+
+  const narutoImages = [
+    "https://narutodb.xyz/cards/clans.jpeg",
+    "https://i.pinimg.com/736x/16/f2/88/16f28816b583a33cc6dec64afec0ad0d.jpg",
+  ];
+
   return (
     <>
       <div>
+        <CarouselComponent
+          images={narutoImages}
+          slidesPerView={1}
+          autoplay={true}
+          slideClassName="w-full h-64"
+        />
+        {/* {clans?.map((clan) => (
+          <div className="flex flex-col justify-center items-center">
+            <img
+              src={clan.characters[0].images[0]}
+              alt={clan.name}
+              className="w-40 h-40 rounded-full"
+            />
+            <Typography
+              variant="h5"
+              component="div"
+              style={{ marginBottom: "1rem" }}
+            >
+              {clan.name}
+            </Typography>
+            <Typography
+              variant="h6"
+              component="div"
+              style={{ marginBottom: "1rem" }}
+            >
+              {clan.characters.length} personagens
+            </Typography>
+          </div>
+        ))} */}
         <div className="flex flex-col justify-center items-center">
           <Typography>
             <h1 className="text-2xl ">Clãs de konoa</h1>
