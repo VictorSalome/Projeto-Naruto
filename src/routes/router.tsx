@@ -1,13 +1,14 @@
 import { Route, Routes, useNavigate } from "react-router-dom";
-import {
-  ExploreWorldPage,
-  HomePage,
-  ExploreClansPages,
-  SearchClanPage,
-} from "../pages";
+
 import { NavBar } from "../components";
 
 import { useEffect } from "react";
+import {
+  ExploreClansPages,
+  ExploreWorldPage,
+  HomePage,
+  SearchClanPage,
+} from "../pages";
 
 export const AppRouter: React.FC = () => {
   const navigate = useNavigate();
