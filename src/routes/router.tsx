@@ -23,7 +23,7 @@ export const AppRouter: React.FC = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/explore-world" element={<ExploreWorldPage />} />
         <Route path="/explore-clans" element={<ExploreClansPages />} />
-        <Route path="/seach-clans" element={<SearchClanPage />} />
+        <Route path="/search-clans" element={<SearchClanPage />} />
       </Routes>
     </>
   );

@@ -46,7 +46,7 @@ export const ExploreClansPages = () => {
               </Typography>
 
               <div className="mt-5 mb-10">
-                <Link to="/seach-clans">
+                <Link to="/search-clans">
                   <Button
                     style={{ backgroundColor: "#f77f00" }}
                     variant="contained"
