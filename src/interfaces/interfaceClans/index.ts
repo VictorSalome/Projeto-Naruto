@@ -16,7 +16,7 @@ export interface IClan {
 export interface ICharacter {
   id: number;
   name: string;
-  images: string[];
+  images: string;
   debut?: IDebut;
   jutsu?: string[];
   personal: IPersonal;

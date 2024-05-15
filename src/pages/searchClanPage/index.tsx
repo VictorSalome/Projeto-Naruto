@@ -98,7 +98,7 @@ export const SearchClanPage = () => {
                 <CardMedia
                   component="img"
                   height="140"
-                  image={clan.characters[0].images}
+                  image="https://narutodb.xyz/_next/image?url=%2Fnaruto-head.png&w=828&q=75"
                   alt="green iguana"
                   className="w-28 h-28"
                 />
