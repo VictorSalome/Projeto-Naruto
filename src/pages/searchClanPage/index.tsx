@@ -13,11 +13,19 @@ import { useGetClan } from "../../hooks";
 import { CiSearch } from "react-icons/ci";
 
 export const SearchClanPage = () => {
-  const { data, isLoading } = useGetClan(); // Incluímos isLoading do hook customizado
-
+  const { data, isLoading } = useGetClan();
   const clans = data?.clans;
-
   const [loadingSkeleton] = useState(false);
+
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const filteredClans = clans?.filter((clan) =>
+    clan.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   // Lógica para exibir o esqueleto enquanto os dados estão sendo carregados
   if (isLoading || loadingSkeleton) {
@@ -87,11 +95,12 @@ export const SearchClanPage = () => {
               </InputAdornment>
             ),
           }}
+          onChange={handleSearch}
         />
       </div>
 
       <div className="flex flex-wrap justify-center mt-3">
-        {clans?.map((clan) => (
+        {filteredClans?.map((clan) => (
           <div key={clan.id} className="p-2 w-1/2 md:w-1/4">
             <Card sx={{ maxWidth: 180 }}>
               <CardActionArea>
