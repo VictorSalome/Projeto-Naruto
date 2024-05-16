@@ -7,9 +7,7 @@ import { CardInitial, InputSearch, SkeletonSearch } from "./components";
 
 export const SearchClanPage = () => {
   const { isLoading } = useGetClan();
-
   const [loadingSkeleton] = useState(false);
-
   const [searchTerm, setSearchTerm] = useState("");
 
   if (isLoading || loadingSkeleton) {

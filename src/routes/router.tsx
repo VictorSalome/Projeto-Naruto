@@ -9,6 +9,7 @@ import {
   HomePage,
   SearchClanPage,
 } from "../pages";
+import { ClanDetailsPage } from "../pages/searchClanPage/components";
 
 export const AppRouter: React.FC = () => {
   const navigate = useNavigate();
@@ -24,6 +25,7 @@ export const AppRouter: React.FC = () => {
         <Route path="/explore-world" element={<ExploreWorldPage />} />
         <Route path="/explore-clans" element={<ExploreClansPages />} />
         <Route path="/search-clans" element={<SearchClanPage />} />
+        <Route path="/clan/:id" element={<ClanDetailsPage />} />
       </Routes>
     </>
   );
