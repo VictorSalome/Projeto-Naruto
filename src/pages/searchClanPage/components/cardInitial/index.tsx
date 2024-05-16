@@ -28,8 +28,6 @@ export const CardInitial: React.FC<CardInitialProps> = ({ onClick }) => {
     clan.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  console.log(clans);
-
   return (
     <>
       <div className="flex flex-wrap justify-center mt-3" onClick={onClick}>
