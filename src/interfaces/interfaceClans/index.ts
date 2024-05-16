@@ -42,7 +42,7 @@ export interface IDebut {
 
 export interface IPersonal {
   sex: string;
-  affiliation: unknown;
+  affiliation: string;
   clan: string;
   age?: IAge;
   status?: string;

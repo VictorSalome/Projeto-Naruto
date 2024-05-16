@@ -35,7 +35,7 @@ export const CardInitial: React.FC<CardInitialProps> = ({ onClick }) => {
           <div
             key={clan.id}
             onClick={() => handleCardClick(clan.id)}
-            className="p-2 w-1/2 md:w-1/4"
+            className="p-2 w-1/2 "
           >
             <Card sx={{ maxWidth: 180 }}>
               <CardActionArea>
