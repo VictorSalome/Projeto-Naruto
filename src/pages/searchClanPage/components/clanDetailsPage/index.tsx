@@ -15,7 +15,7 @@ export const ClanDetailsPage = () => {
         {clan ? (
           <div className="p-2  ">
             <Typography variant="h4">Clã {clan.name}</Typography>
-            <Typography variant="subtitle1">Membros do clã:</Typography>
+            <Typography variant="subtitle1">Membros do clã</Typography>
 
             <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
               {clan.characters.map((character) => (
