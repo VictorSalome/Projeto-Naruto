@@ -8,8 +8,11 @@ import { CardInitial, InputSearch, SkeletonSearch } from "./components";
 export const SearchClanPage = () => {
   const { isLoading } = useGetClan();
   const [loadingSkeleton] = useState(false);
-  const [, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
 
+  const handleSearch = (value: string) => {
+    setSearchTerm(value); // Atualiza o estado com o termo de busca
+  }
   if (isLoading || loadingSkeleton) {
     return (
       <div>
@@ -22,11 +25,11 @@ export const SearchClanPage = () => {
   return (
     <div>
       <div>
-        <InputSearch onSearch={setSearchTerm} />
+        <InputSearch onSearch={handleSearch} />
       </div>
 
       <div>
-        <CardInitial />
+        <CardInitial searchTerm={searchTerm}  />
       </div>
     </div>
   );
