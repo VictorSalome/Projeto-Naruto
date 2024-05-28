@@ -28,7 +28,7 @@ export const CardInitial: React.FC<CardInitialProps> = ({ searchTerm }) => {
   );
 
   const [page, setPage] = React.useState(1);
-  const itemsPerPage = 9;
+  const itemsPerPage = 6;
 
   const handlePageChange = (value: number) => {
     setPage(value);
