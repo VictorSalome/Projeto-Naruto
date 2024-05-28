@@ -23,7 +23,7 @@ export const ClanDetailsPage = () => {
 
   return (
     <>
-      <div className="flex flex-wrap justify-center items-center mt-3 p-3  md:justify-center">
+      <div className="flex flex-wrap justify-center items-center mt-3 p-3 md:justify-center">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-4 lg:gap-4">
           {clan ? (
             clan.characters
@@ -122,16 +122,16 @@ export const ClanDetailsPage = () => {
             <Typography variant="h4">Clã não encontrado</Typography>
           )}
         </div>
-        <div className="flex justify-center mt-5">
-          <Pagination
-            count={clan ? Math.ceil(clan.characters.length / itemsPerPage) : 1}
-            page={page}
-            onChange={(_event: React.ChangeEvent<unknown>, value: number) =>
-              handlePageChange(value)
-            }
-            className="m-auto"
-          />
-        </div>
+      </div>
+      <div className="flex justify-center mt-5">
+        <Pagination
+          count={clan ? Math.ceil(clan.characters.length / itemsPerPage) : 1}
+          page={page}
+          onChange={(_event: React.ChangeEvent<unknown>, value: number) =>
+            handlePageChange(value)
+          }
+          className="m-auto mb-10"
+        />
       </div>
     </>
   );
