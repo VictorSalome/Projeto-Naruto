@@ -1,14 +1,20 @@
 import Hamburger from "hamburger-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Drawer, List, ListItem, ListItemText } from "@mui/material";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export const NavMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
 
   return (
     <>
@@ -21,7 +27,9 @@ export const NavMobile = () => {
           <div className="">
             <List>
               <ListItem>
-                <Link to="/">Home</Link>
+                <Link to="/" onClick={toggleDrawer}>
+                  Home
+                </Link>
               </ListItem>
               <ListItem>
                 <ListItemText primary="Anime" />
@@ -36,3 +44,4 @@ export const NavMobile = () => {
     </>
   );
 };
+
