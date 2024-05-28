@@ -17,7 +17,7 @@ export const HokagesInfo = () => {
 
       <div className="flex flex-col text-justify items-center justify-center mt-2 mb-2">
         <Typography>
-          <h1 className="text-2xl ">Konoha</h1>
+          <h1 className="text-2xl  font-naruto">Konoha</h1>
         </Typography>
         <Typography
           sx={{ mb: 1 }}
@@ -38,7 +38,7 @@ export const HokagesInfo = () => {
           <br />
         </Typography>
 
-        <Box sx={{ width: "100%" }}>
+        <Box sx={{ width: { xs: "100%", sm: "50%" } }}>
           <Grid
             container
             rowSpacing={1}
@@ -53,7 +53,7 @@ export const HokagesInfo = () => {
                 />
               </span>
             </Grid>
-            <Grid xs={6}>
+            <Grid xs={6} fontSize={16}>
               <span>
                 <CardHokage
                   name="Tobirama Senju"
@@ -68,7 +68,7 @@ export const HokagesInfo = () => {
                 <CardHokage
                   name="Hiruzen Sarutobi"
                   title="Terceiro Hokage"
-                  src=" https://pm1.aminoapps.com/6477/93103ddc6e2822aa8d996d1b616a6883a1134619_00.jpg"
+                  src="https://pm1.aminoapps.com/6477/93103ddc6e2822aa8d996d1b616a6883a1134619_00.jpg"
                 />
               </span>
             </Grid>
@@ -95,7 +95,6 @@ export const HokagesInfo = () => {
           Desde o lendário Hashirama Senju, o Primeiro Hokage, até o icônico
           Naruto Uzumaki, o Sétimo Hokage, esses líderes moldaram a Vila da
           Folha em um centro de poder e excelência ninja.
-          
           <br />
           <br />
           Além de seu papel como líderes militares e políticos, os Hokages

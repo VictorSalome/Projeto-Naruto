@@ -3,9 +3,9 @@ import { ContentMain } from "./components";
 
 export const HomePage = () => {
   const narutoImages = [
-    "https://i2.wp.com/getwallpapers.com/wallpaper/full/f/1/2/1105107-best-naruto-team-7-wallpapers-2560x1600-laptop.jpg",
+    "https://observatoriodocinema.uol.com.br/wp-content/plugins/seox-image-magick/imagick_convert.php?width=1200&height=675&format=.jpg&quality=91&imagick=uploads-observatoriodocinema.seox.com.br/2023/09/naruto-capa.jpg",
     "https://wallpaper.forfun.com/fetch/db/db786d21d302826e9474a94fc6d5fc6e.jpeg",
-    "https://i.ebayimg.com/images/g/-o4AAOSwYoFfjVAJ/s-l1200.webp",
+    "https://miro.medium.com/v2/resize:fit:1400/0*qKksSvflsm_XHdI7.jpg",
     "https://wallpaperset.com/w/full/f/b/f/446981.jpg",
   ];
 
@@ -15,7 +15,7 @@ export const HomePage = () => {
         images={narutoImages}
         slidesPerView={1}
         autoplay={true}
-        slideClassName="w-full h-64"
+    
       />
       <ContentMain />
     </>

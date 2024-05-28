@@ -11,7 +11,7 @@ export const InputSearch = ({ onSearch }: ISearch) => {
     <>
       <div className="mt-5 flex justify-center">
         <TextField
-          className="w-96"
+          className="w-full md:w-[60rem] max-w-[60rem] "
           id="standard-search"
           type="search"
           variant="outlined"

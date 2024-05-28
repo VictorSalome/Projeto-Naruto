@@ -1,28 +1,23 @@
 import { Button, Typography } from "@mui/material";
 
-import { CarouselComponent } from "../../components";
 import { Link } from "react-router-dom";
 
 export const ExploreClansPages = () => {
-  const narutoImages = [
-    "https://narutodb.xyz/cards/clans.jpeg",
-    "https://img.quizur.com/f/img6166c8fe7e98e5.77316732.png?lastEdited=1634126082",
-  ];
-
   return (
     <>
       <div>
         <div className="flex flex-col ">
-          <div className="mt-2">
+          <div className="mt-2 flex flex-col ">
             <Typography className="text-center">
-              <h1 className="text-2xl ">Clãs em Naruto</h1>
+              <h1 className="text-2xl font-naruto ">Clas em Naruto</h1>
             </Typography>
-            <CarouselComponent
-              images={narutoImages}
-              slidesPerView={1}
-              autoplay={true}
-              slideClassName="w-full h-64"
+
+            <img
+              src="https://img.quizur.com/f/img6166c8fe7e98e5.77316732.png?lastEdited=1634126082"
+              alt="clans"
+              className="flex flex-col justify-center items-center p-3 md:w-[50rem] md:flex md:mx-auto"
             />
+
             <div className="flex flex-col text-justify items-center justify-center mt-4">
               <Typography
                 sx={{ mb: 1.5 }}

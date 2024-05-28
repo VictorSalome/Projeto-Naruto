@@ -4,10 +4,18 @@ import { Link } from "react-router-dom";
 export const ExploreWord = () => {
   return (
     <div className="flex flex-col justify-center items-center">
-      <Typography variant="h5" component="div" style={{ marginBottom: "1rem" }}>
+      <Typography
+        variant="h5"
+        component="div"
+        style={{ marginBottom: "1rem", fontFamily: "Naruto" }}
+      >
         Venha explorar
       </Typography>
-      <Typography variant="h6" component="div" style={{ marginBottom: "1rem" }}>
+      <Typography
+        variant="h6"
+        component="div"
+        style={{ marginBottom: "1rem", fontFamily: "Naruto", textAlign: "center" }}
+      >
         Explore o mundo dos personagens de Naruto
       </Typography>
       <div>
@@ -52,7 +60,7 @@ export const ExploreWord = () => {
       <div className="mt-5 mb-10">
         <Link to="/explore-world">
           <Button
-            style={{ backgroundColor: "#f77f00" }}
+            style={{ backgroundColor: "#f77f00", fontFamily: "Naruto" }}
             variant="contained"
             startIcon={
               <img
@@ -62,7 +70,7 @@ export const ExploreWord = () => {
                 height="30"
               />
             }
-            className="mt-5"
+            className="mt-5 "
           >
             Explore o mundo
           </Button>

@@ -3,10 +3,18 @@ import { Typography } from "@mui/material";
 export const NarutoHistory = () => {
   return (
     <div className="flex flex-col justify-center items-center">
-      <Typography variant="h5" component="div" style={{ marginBottom: "1rem" }}>
+      <Typography
+        variant="h5"
+        component="div"
+        style={{ marginBottom: "1rem", fontFamily: "Naruto" }}
+      >
         Naruto
       </Typography>
-      <Typography variant="h6" component="div" style={{ marginBottom: "1rem" }}>
+      <Typography
+        variant="h6"
+        component="div"
+        style={{ marginBottom: "1rem", fontFamily: "Naruto", textAlign: "center" }}
+      >
         Naruto: A Jornada do Ninja Determinado
       </Typography>
       <Typography

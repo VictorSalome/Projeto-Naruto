@@ -8,6 +8,7 @@ export interface IGetClanResponse {
 }
 
 export interface IClan {
+  length: number;
   id: number;
   name: string;
   characters: ICharacter[];

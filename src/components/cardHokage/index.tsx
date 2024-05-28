@@ -12,7 +12,11 @@ export const CardHokage = ({ title, src, name }: ICardHokage) => {
   return (
     <CardComponent sx={{ minWidth: 175 }}>
       <CardContent>
-        <Typography sx={{ fontSize: 18 }} color="text.secondary" gutterBottom>
+        <Typography
+          sx={{ fontSize: 16, fontFamily: "Naruto" }}
+          color="text.secondary"
+          gutterBottom
+        >
           {title}
         </Typography>
 
@@ -20,7 +24,7 @@ export const CardHokage = ({ title, src, name }: ICardHokage) => {
           <img src={src} alt="Hokage" />
         </Typography>
         <Typography
-          sx={{ fontSize: 16, mt: 1.5 }}
+          sx={{ fontSize: 15, mt: 1.5, fontFamily: "Naruto" }}
           color="text.secondary"
           gutterBottom
         >

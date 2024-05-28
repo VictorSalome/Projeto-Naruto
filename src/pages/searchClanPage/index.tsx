@@ -25,7 +25,7 @@ export const SearchClanPage = () => {
   return (
     <div>
       <div>
-        <InputSearch onSearch={handleSearch} />
+        <InputSearch onSearch={handleSearch}  />
       </div>
 
       <div>
