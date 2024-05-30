@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import { CiSearch } from "react-icons/ci";
 
-export const SkeletonSearch = () => {
+export const SkeletonMobile = () => {
   return (
     <>
       <div className="mt-5 flex justify-center">

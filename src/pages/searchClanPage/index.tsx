@@ -3,7 +3,8 @@ import { useState } from "react";
 
 import { useGetClan } from "../../hooks";
 
-import { CardInitial, InputSearch, SkeletonSearch } from "./components";
+import { CardInitial, InputSearch, SkeletonMobile } from "./components";
+import { SkeletonWeb } from "./components/skeletonWeb";
 
 export const SearchClanPage = () => {
   const { isLoading } = useGetClan();
@@ -12,11 +13,18 @@ export const SearchClanPage = () => {
 
   const handleSearch = (value: string) => {
     setSearchTerm(value); // Atualiza o estado com o termo de busca
-  }
+  };
+
+  const isMobileView = window.innerWidth <= 770;
+
   if (isLoading || loadingSkeleton) {
     return (
       <div>
-        <SkeletonSearch />
+        {isMobileView ? (
+          <SkeletonMobile />
+        ) : (
+          <SkeletonWeb />
+        )}
       </div>
     );
   }
@@ -25,11 +33,11 @@ export const SearchClanPage = () => {
   return (
     <div>
       <div>
-        <InputSearch onSearch={handleSearch}  />
+        <InputSearch onSearch={handleSearch} />
       </div>
 
       <div>
-        <CardInitial searchTerm={searchTerm}  />
+        <CardInitial searchTerm={searchTerm} />
       </div>
     </div>
   );
