@@ -73,7 +73,7 @@ export const CardInitial: React.FC<CardInitialProps> = ({ searchTerm }) => {
       {filteredClans?.length !== undefined &&
         filteredClans.length > itemsPerPage && (
           <div className="flex justify-center md:mt-3 md:mb-3 w-full">
-            <div className="flex w-full justify-center" >
+            <div className="flex w-full justify-center">
               <Pagination
                 count={Math.ceil(filteredClans.length / itemsPerPage)}
                 page={page}
