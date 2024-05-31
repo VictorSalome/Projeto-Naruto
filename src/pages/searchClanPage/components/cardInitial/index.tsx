@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Card,
   CardActionArea,
@@ -16,28 +16,39 @@ interface CardInitialProps {
 
 export const CardInitial: React.FC<CardInitialProps> = ({ searchTerm }) => {
   const { data } = useGetClan();
-  const clans = data?.clans;
+  const clans = data?.clans || [];
   const navigate = useNavigate();
+  const [page, setPage] = React.useState(1);
+  const itemsPerPage = 6;
 
   const handleCardClick = (clanId: number) => {
     navigate(`/clan/${clanId}`);
   };
 
-  const filteredClans = clans?.filter((clan) =>
+  const filteredClans = clans.filter((clan) =>
     clan.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const [page, setPage] = React.useState(1);
-  const itemsPerPage = 6;
-
-  const handlePageChange = (value: number) => {
+  const handlePageChange = (
+    _event: React.ChangeEvent<unknown>,
+    value: number
+  ) => {
+    console.log("Valor da pagina: ", value);
     setPage(value);
+    window.scrollTo(0, 0); // Scroll to top when page changes
   };
+
+  useEffect(() => {
+    // Reset page to 1 when search term changes
+    setPage(1);
+  }, [searchTerm]);
+
+  console.log("Clãs filtrados: ", filteredClans);
 
   return (
     <div className="flex flex-wrap justify-center mt-3">
       {filteredClans
-        ?.slice((page - 1) * itemsPerPage, page * itemsPerPage)
+        .slice((page - 1) * itemsPerPage, page * itemsPerPage)
         .map((clan) => (
           <div
             key={clan.id}
@@ -70,22 +81,18 @@ export const CardInitial: React.FC<CardInitialProps> = ({ searchTerm }) => {
             </Card>
           </div>
         ))}
-      {filteredClans?.length !== undefined &&
-        filteredClans.length > itemsPerPage && (
-          <div className="flex justify-center md:mt-3 md:mb-3 w-full">
-            <div className="flex w-full justify-center">
-              <Pagination
-                count={Math.ceil(filteredClans.length / itemsPerPage)}
-                page={page}
-                onChange={(
-                  _event: React.ChangeEvent<unknown>,
-                  value: number
-                ): void => handlePageChange(value)}
-                className="mx-auto mt-4"
-              />
-            </div>
+      {filteredClans.length > itemsPerPage && (
+        <div className="flex justify-center md:mt-3 md:mb-3 w-full">
+          <div className="flex w-full justify-center">
+            <Pagination
+              count={Math.ceil(filteredClans.length / itemsPerPage)}
+              page={page}
+              onChange={handlePageChange}
+              className="mx-auto mt-4"
+            />
           </div>
-        )}
+        </div>
+      )}
     </div>
   );
 };
