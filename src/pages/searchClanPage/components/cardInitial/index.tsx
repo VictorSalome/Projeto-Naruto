@@ -11,7 +11,7 @@ import { useGetClan } from "../../../../hooks";
 import { useNavigate } from "react-router-dom";
 
 interface CardInitialProps {
-  searchTerm: string; // Adiciona a propriedade searchTerm ao tipo de props
+  searchTerm: string;
 }
 
 export const CardInitial: React.FC<CardInitialProps> = ({ searchTerm }) => {
@@ -19,7 +19,7 @@ export const CardInitial: React.FC<CardInitialProps> = ({ searchTerm }) => {
   const clans = data?.clans || [];
   const navigate = useNavigate();
   const [page, setPage] = React.useState(1);
-  const itemsPerPage = 6;
+  const itemsPerPage = 8;
 
   const handleCardClick = (clanId: number) => {
     navigate(`/clan/${clanId}`);
@@ -33,36 +33,31 @@ export const CardInitial: React.FC<CardInitialProps> = ({ searchTerm }) => {
     _event: React.ChangeEvent<unknown>,
     value: number
   ) => {
-    console.log("Valor da pagina: ", value);
     setPage(value);
     window.scrollTo(0, 0); // Scroll to top when page changes
   };
 
   useEffect(() => {
-    // Reset page to 1 when search term changes
     setPage(1);
   }, [searchTerm]);
 
-  console.log("Clãs filtrados: ", filteredClans);
-
   return (
-    <div className="flex flex-wrap justify-center mt-3">
+    <div className=" flex flex-wrap justify-center mt-3">
       {filteredClans
         .slice((page - 1) * itemsPerPage, page * itemsPerPage)
         .map((clan) => (
           <div
             key={clan.id}
             onClick={() => handleCardClick(clan.id)}
-            className="p-3 w-1/2 md:w-1/4 flex-grow-0 mx-auto md:mx-2"
+            className="p-3 w-1/2 md:w-1/5 flex-grow-0 mx-auto md:mx-2"
           >
             <Card sx={{ maxWidth: 300 }}>
               <CardActionArea>
                 <CardMedia
                   component="img"
-                  height="200"
                   image={clan.characters[0].images[0]}
                   alt={clan.name}
-                  className="w-full h-48 md:h-72"
+                  className="w-full h-48 md:h-64"
                 />
                 <CardContent>
                   <Typography variant="h6" component="div" fontWeight={600}>

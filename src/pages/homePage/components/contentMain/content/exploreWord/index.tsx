@@ -14,7 +14,11 @@ export const ExploreWord = () => {
       <Typography
         variant="h6"
         component="div"
-        style={{ marginBottom: "1rem", fontFamily: "Naruto", textAlign: "center" }}
+        style={{
+          marginBottom: "1rem",
+          fontFamily: "Naruto",
+          textAlign: "center",
+        }}
       >
         Explore o mundo dos personagens de Naruto
       </Typography>
@@ -73,6 +77,24 @@ export const ExploreWord = () => {
             className="mt-5 "
           >
             Explore o mundo
+          </Button>
+        </Link>
+
+        <Link to="/explore-characters">
+          <Button
+            style={{ backgroundColor: "#f77f00", fontFamily: "Naruto" }}
+            variant="contained"
+            startIcon={
+              <img
+                src="https://www.iconninja.com/files/468/145/137/naruto-icon.svg"
+                alt="leaf-seven"
+                width="30"
+                height="30"
+              />
+            }
+            className="mt-5 "
+          >
+            Explore os personagens
           </Button>
         </Link>
       </div>

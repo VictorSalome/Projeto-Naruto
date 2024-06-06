@@ -24,20 +24,7 @@ export const useGetCharacters = () => {
   return { data, isLoading };
 };
 
-export const useGetKara = () => {
-  const { data, isLoading } = useQuery({
-    queryKey: ["kara"],
-    queryFn: () => {
-      const response = HTTPService.get<IGetCharacterResponse>("/kara").then(
-        (res) => res.data
-      );
 
-      return response;
-    },
-  });
-
-  return { data, isLoading };
-};
 
 export const useGetClan = () => {
   const limit = 58;

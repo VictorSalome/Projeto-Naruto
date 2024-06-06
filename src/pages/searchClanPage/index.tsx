@@ -11,29 +11,21 @@ export const SearchClanPage = () => {
   const [loadingSkeleton] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
 
-  const handleSearch = (value: string) => {
+  const handleSearchClans = (value: string) => {
     setSearchTerm(value); // Atualiza o estado com o termo de busca
   };
 
   const isMobileView = window.innerWidth <= 770;
 
   if (isLoading || loadingSkeleton) {
-    return (
-      <div>
-        {isMobileView ? (
-          <SkeletonMobile />
-        ) : (
-          <SkeletonWeb />
-        )}
-      </div>
-    );
+    return <div>{isMobileView ? <SkeletonMobile /> : <SkeletonWeb />}</div>;
   }
 
   // Renderização do conteúdo final quando os dados estiverem carregados
   return (
     <div>
       <div>
-        <InputSearch onSearch={handleSearch} />
+        <InputSearch onSearch={handleSearchClans} placeholder="Insira um clã" />
       </div>
 
       <div>

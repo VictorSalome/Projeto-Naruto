@@ -37,6 +37,11 @@ export const NavMobile = () => {
               <ListItem>
                 <ListItemText primary="Personagens" />
               </ListItem>
+              <ListItem>
+                <Link to="/search-clans" onClick={toggleDrawer}>
+                  Explorar clans
+                </Link>
+              </ListItem>
             </List>
           </div>
         </Drawer>
@@ -44,4 +49,3 @@ export const NavMobile = () => {
     </>
   );
 };
-

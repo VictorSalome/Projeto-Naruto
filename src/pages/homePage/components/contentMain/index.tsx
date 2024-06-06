@@ -16,6 +16,7 @@ export const ContentMain = () => {
         <NarutoHistory />
       </div>
 
+
       <div>
         <ExploreWord />
       </div>

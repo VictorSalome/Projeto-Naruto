@@ -10,7 +10,7 @@ interface ICardHokage {
 
 export const CardHokage = ({ title, src, name }: ICardHokage) => {
   return (
-    <CardComponent sx={{ minWidth: 175 }}>
+    <CardComponent sx={{ minWidth: 135 }}>
       <CardContent>
         <Typography
           sx={{ fontSize: 16, fontFamily: "Naruto" }}
@@ -21,7 +21,7 @@ export const CardHokage = ({ title, src, name }: ICardHokage) => {
         </Typography>
 
         <Typography variant="h5" component="div">
-          <img src={src} alt="Hokage" />
+          <img src={src} alt="Hokage" style={{ width: "100%" }} />
         </Typography>
         <Typography
           sx={{ fontSize: 15, mt: 1.5, fontFamily: "Naruto" }}

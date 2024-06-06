@@ -8,6 +8,7 @@ export const NavWeb = () => {
       </Link>
       <a className="text-white">Anime</a>
       <a className="text-white">Personagens</a>
+      <Link to="/search-clans">Explorar clans</Link>
     </nav>
   );
 };
