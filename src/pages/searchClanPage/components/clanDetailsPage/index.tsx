@@ -17,7 +17,7 @@ export const ClanDetailsPage = () => {
   const clan = data?.clans.find((clan) => clan.id === Number(id));
 
   const [page, setPage] = useState(1);
-  const itemsPerPage = window.innerWidth < 768 ? 3 : 8;
+  const itemsPerPage = window.innerWidth < 768 ? 3 : 10;
 
   const handlePageChange = (value: number) => {
     setPage(value);
@@ -37,7 +37,7 @@ export const ClanDetailsPage = () => {
                 sx={{
                   width: 350,
                   height: "400px",
-                  margin: "10px",
+                  margin: "5px",
                 }}
               >
                 <CardMedia
@@ -125,14 +125,14 @@ export const ClanDetailsPage = () => {
             ))
         )}
       </div>
-      <div className="flex justify-center mt-5">
+      <div className="flex justify-center">
         <Pagination
           count={clan ? Math.ceil(clan.characters.length / itemsPerPage) : 1}
           page={page}
           onChange={(_event: React.ChangeEvent<unknown>, value: number) =>
             handlePageChange(value)
           }
-          className="m-auto mb-10"
+          className="m-auto "
         />
       </div>
     </>

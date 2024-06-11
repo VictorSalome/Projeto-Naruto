@@ -19,7 +19,7 @@ export const CarouselComponent: React.FC<IPropsCarousel> = ({
   autoplay,
 }) => {
   return (
-    <div className="App">
+    <div className="App cursor-pointer">
       <Swiper
         spaceBetween={10}
         slidesPerView={slidesPerView}
