@@ -6,14 +6,13 @@ import { ICharacter } from "../../interfaces/interfaceCharacters";
 
 import { SkeletonCard } from "./components/skeletonCard/index.tsx";
 import { CharacterCard, FilterDrawer, SearchBar } from "./components/index.ts";
+import { useNavigate } from "react-router-dom";
 
 export const ExploreCharacters = () => {
   const { data, isLoading } = useGetCharacters();
-  console.log("isLoading", isLoading);
   const characters: ICharacter[] | undefined = data?.characters.sort((a, b) =>
     a.name.localeCompare(b.name)
   );
-
   const [page, setPage] = useState(1);
   const [filteredCharacters, setFilteredCharacters] = useState<
     ICharacter[] | undefined
@@ -21,6 +20,8 @@ export const ExploreCharacters = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const itemsPerPage = 6;
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (characters) {
@@ -51,6 +52,10 @@ export const ExploreCharacters = () => {
     (page - 1) * itemsPerPage,
     page * itemsPerPage
   );
+
+  const handleCardClick = (characterId: number) => {
+    navigate(`/character/${characterId}`);
+  };
 
   return (
     <div>
@@ -96,6 +101,7 @@ export const ExploreCharacters = () => {
                 key={index}
                 character={character}
                 isLoading={isLoading}
+                onCardClick={() => handleCardClick(character.id)}
               />
             ))}
           </div>

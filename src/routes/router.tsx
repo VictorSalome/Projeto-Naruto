@@ -8,9 +8,10 @@ import {
   ExploreWorldPage,
   HomePage,
   SearchClanPage,
+  ExploreCharacters,
+  ClanDetailsPage,
+  CharacterDetailsPage,
 } from "../pages";
-import { ClanDetailsPage } from "../pages/searchClanPage/components";
-import { ExploreCharacters } from "../pages/exploreCharacters";
 
 export const AppRouter: React.FC = () => {
   const navigate = useNavigate();
@@ -28,6 +29,7 @@ export const AppRouter: React.FC = () => {
         <Route path="/search-clans" element={<SearchClanPage />} />
         <Route path="/explore-characters" element={<ExploreCharacters />} />
         <Route path="/clan/:id" element={<ClanDetailsPage />} />
+        <Route path="/character/:id" element={<CharacterDetailsPage />} />
       </Routes>
     </>
   );

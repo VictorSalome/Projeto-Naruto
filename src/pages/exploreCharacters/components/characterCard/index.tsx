@@ -10,17 +10,17 @@ import { ICharacter } from "../../../../interfaces/interfaceCharacters";
 interface ICharacterCardProps {
   character: ICharacter;
   isLoading: boolean;
+  onCardClick: () => void;
 }
 
 export const CharacterCard: React.FC<ICharacterCardProps> = ({
   character,
   isLoading,
+  onCardClick,
 }) => {
-  console.log("CharacterCard isLoading:", isLoading); // Verificação
-
   return (
     <div className="flex-1 px-3">
-      <Card sx={{ maxWidth: 520, height: "100%" }}>
+      <Card onClick={onCardClick} sx={{ maxWidth: 520, height: "100%" }}>
         <CardActionArea>
           {!isLoading && (
             <>
