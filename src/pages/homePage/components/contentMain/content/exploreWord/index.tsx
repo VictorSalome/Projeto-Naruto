@@ -61,7 +61,7 @@ export const ExploreWord = () => {
         </div>
       </div>
 
-      <div className="mt-5 mb-10">
+      <div className="mt-5 mb-10 flex gap-11 p-4">
         <Link to="/explore-world">
           <Button
             style={{ backgroundColor: "#f77f00", fontFamily: "Naruto" }}
