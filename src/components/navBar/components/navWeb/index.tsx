@@ -8,7 +8,7 @@ export const NavWeb = () => {
       </Link>
       <Link to="/explore-world">História do anime</Link>
       <Link to="/explore-characters">Personagens</Link>
-      <Link to="/sexplore-clans">Clãs</Link>
+      <Link to="/explore-clans">Clãs</Link>
       <Link to="/search-clans">Explorar clãs</Link>
     </nav>
   );

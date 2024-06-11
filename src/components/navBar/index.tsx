@@ -1,8 +1,7 @@
 import { useMediaQuery } from "@mui/material";
 import { AppBar, Toolbar, Typography } from "@mui/material";
-
-import { NavWeb } from "./components/navWeb";
-import { NavMobile } from "./components/navMobile";
+import { NavMobile, NavWeb } from "./components";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -15,11 +14,13 @@ export const NavBar = () => {
             style={{ flex: 1 }}
             className="flex items-center  "
           >
-            <img
-              className="w-12 h-12 "
-              src="https://i.pinimg.com/originals/74/45/6c/74456c2bd47666329b9dee5dcad4ece7.png"
-              alt=""
-            />
+            <Link to="/">
+              <img
+                className="w-12 h-12 "
+                src="https://i.pinimg.com/originals/74/45/6c/74456c2bd47666329b9dee5dcad4ece7.png"
+                alt="img-naruto"
+              />
+            </Link>
 
             <p className="font-naruto">Naruto</p>
           </Typography>

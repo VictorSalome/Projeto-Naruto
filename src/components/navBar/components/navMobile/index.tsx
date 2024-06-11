@@ -42,7 +42,7 @@ export const NavMobile = () => {
                 </Link>
               </ListItem>
               <ListItem>
-                <Link to="/sexplore-clans" onClick={toggleDrawer}>
+                <Link to="/explore-clans" onClick={toggleDrawer}>
                   Clãs
                 </Link>
               </ListItem>
