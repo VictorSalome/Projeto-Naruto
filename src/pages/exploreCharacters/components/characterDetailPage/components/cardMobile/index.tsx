@@ -11,7 +11,7 @@ export const CardMobile: React.FC<CharacterDetailsMobileProps> = ({
   return (
     <Card
       sx={{
-        maxWidth: 350,
+        width: "100%",
         height: "100%",
         marginRight: "10px",
         marginBottom: "15px",
@@ -23,7 +23,7 @@ export const CardMobile: React.FC<CharacterDetailsMobileProps> = ({
         height="140"
         image={character.images[0]}
         alt={character.name}
-        className="w-28 h-full md:w-40 md:h-40 lg:w-52 lg:h-52"
+        className="w-full h-full md:w-40 md:h-40 lg:w-52 lg:h-52"
       />
       <CardContent>
         <Typography

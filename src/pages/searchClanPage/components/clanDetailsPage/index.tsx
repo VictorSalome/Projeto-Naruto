@@ -125,13 +125,14 @@ export const ClanDetailsPage = () => {
             ))
         )}
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center" style={{ position: "relative" }}>
         <Pagination
           count={clan ? Math.ceil(clan.characters.length / itemsPerPage) : 1}
           page={page}
-          onChange={(_event: React.ChangeEvent<unknown>, value: number) =>
-            handlePageChange(value)
-          }
+          onChange={(_event: React.ChangeEvent<unknown>, value: number) => {
+            handlePageChange(value);
+            window.scrollTo(0, 0);
+          }}
           className="m-auto "
         />
       </div>

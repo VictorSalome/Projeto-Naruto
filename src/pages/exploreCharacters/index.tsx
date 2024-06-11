@@ -34,6 +34,7 @@ export const ExploreCharacters = () => {
     value: number
   ) => {
     setPage(value);
+    window.scrollTo(0, 0); // Scroll to top when page changes
   };
 
   const handleLetterChange = (letter: string) => {
