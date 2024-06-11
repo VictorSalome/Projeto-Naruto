@@ -10,7 +10,7 @@ import { ICharacter } from "../../../../interfaces/interfaceCharacters";
 interface ICharacterCardProps {
   character: ICharacter;
   isLoading: boolean;
-  onCardClick: () => void;
+  onCardClick?: () => void; // Coloque ? para deixar opcional essa prop
 }
 
 export const CharacterCard: React.FC<ICharacterCardProps> = ({

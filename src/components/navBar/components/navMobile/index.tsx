@@ -1,6 +1,6 @@
 import Hamburger from "hamburger-react";
 import { useEffect, useState } from "react";
-import { Drawer, List, ListItem, ListItemText } from "@mui/material";
+import { Drawer, List, ListItem } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
@@ -32,14 +32,23 @@ export const NavMobile = () => {
                 </Link>
               </ListItem>
               <ListItem>
-                <ListItemText primary="Anime" />
+                <Link to="/explore-world" onClick={toggleDrawer}>
+                  História do anime
+                </Link>
               </ListItem>
               <ListItem>
-                <ListItemText primary="Personagens" />
+                <Link to="/explore-characters" onClick={toggleDrawer}>
+                  Personagens
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link to="/sexplore-clans" onClick={toggleDrawer}>
+                  Clãs
+                </Link>
               </ListItem>
               <ListItem>
                 <Link to="/search-clans" onClick={toggleDrawer}>
-                  Explorar clans
+                  Explorar clãs
                 </Link>
               </ListItem>
             </List>

@@ -1,8 +1,8 @@
 import { useMediaQuery } from "@mui/material";
 import { AppBar, Toolbar, Typography } from "@mui/material";
 
-import { NavWeb } from "../navWeb";
-import { NavMobile } from "../navMobile";
+import { NavWeb } from "./components/navWeb";
+import { NavMobile } from "./components/navMobile";
 
 export const NavBar = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");

@@ -1,7 +1,5 @@
 import { Route, Routes, useNavigate } from "react-router-dom";
-
 import { NavBar } from "../components";
-
 import { useEffect } from "react";
 import {
   ExploreClansPages,
