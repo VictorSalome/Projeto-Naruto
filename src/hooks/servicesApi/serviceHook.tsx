@@ -5,7 +5,7 @@ import { IGetClanResponse } from "../../interfaces/interfaceClans";
 
 export const useGetCharacters = () => {
   //limite por paginacao
-  const limit = 20;
+  const limit = 1431;
 
   const { data, isLoading } = useQuery({
     // nome da chave
@@ -23,8 +23,6 @@ export const useGetCharacters = () => {
 
   return { data, isLoading };
 };
-
-
 
 export const useGetClan = () => {
   const limit = 58;

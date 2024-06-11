@@ -14,7 +14,7 @@
     "@emotion/styled": "^11.11.5",
     "@fontsource/roboto": "^5.0.13",
     "@mui/icons-material": "^5.15.17",
-    "@mui/material": "^5.15.17",
+    "@mui/material": "^5.15.19",
     "axios": "^1.6.8",
     "hamburger-react": "^2.5.0",
     "react": "^18.2.0",
